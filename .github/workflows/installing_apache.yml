@@ -31,8 +31,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |
+        run: | 
+            cd /var/www/html
+            sudo echo "<!DOCTYPE html>\n<html>\n\t<body>\n\t\t<h1>Practicing GitHUB Actions</h1>\n\t</body>\n</html>" > index.html
 
-        cd /var/www/html 
-        sudo echo "<!DOCTYPE html>\n<html>\n\t<body>\n\t\t<h1>Practicing GitHUB Actions</h1>\n\t</body>\n</html>" > index.html
+        
 
